@@ -1,0 +1,764 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lenape Glossary</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .search-box {
+            margin-top: 10px;
+            text-align: center;
+        }
+        .search-box input {
+            width: 90%;
+            max-width: 500px;
+            padding: 12px 15px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .entry {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease;
+        }
+        .entry:hover {
+            transform: scale(1.01);
+        }
+        .term {
+            font-size: 20px;
+            font-weight: 600;
+            color: #34495e;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .definition {
+            margin-top: 8px;
+            font-size: 16px;
+            color: #555;
+        }
+        .audio-button {
+            background-color: #3498db;
+            border: none;
+            color: white;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.2s ease;
+        }
+        .audio-button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+    <script>
+        function filterGlossary() {
+            const input = document.getElementById('searchBox').value.toLowerCase();
+            const entries = document.getElementsByClassName('entry');
+            for (let i = 0; i < entries.length; i++) {
+                const term = entries[i].getElementsByClassName('term')[0].innerText.toLowerCase();
+                const definition = entries[i].getElementsByClassName('definition')[0].innerText.toLowerCase();
+                entries[i].style.display = (term.includes(input) || definition.includes(input)) ? "" : "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Lenape Glossary</h1>
+        <div class="search-box">
+            <input type="text" id="searchBox" onkeyup="filterGlossary()" placeholder="Search Lenape or English...">
+        </div>
+    </header>
+    <div class="container">
+
+        <div class="entry">
+            <div class="term">
+                Ahtu
+                <button class="audio-button" onclick="document.getElementById('audio_Ahtu').play()">🔊</button>
+            </div>
+            <div class="definition">Deer</div>
+            <audio id="audio_Ahtu" src="../audio/Ahtu.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Alel
+                <button class="audio-button" onclick="document.getElementById('audio_Alel').play()">🔊</button>
+            </div>
+            <div class="definition">It is rotten</div>
+            <audio id="audio_Alel" src="../audio/Alel.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Amankhatahkat
+                <button class="audio-button" onclick="document.getElementById('audio_Amankhatahkat').play()">🔊</button>
+            </div>
+            <div class="definition">It is course</div>
+            <audio id="audio_Amankhatahkat" src="../audio/Amankhatahkat.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Aone
+                <button class="audio-button" onclick="document.getElementById('audio_Aone').play()">🔊</button>
+            </div>
+            <div class="definition">Blue</div>
+            <audio id="audio_Aone" src="../audio/Aone.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Askaskwe
+                <button class="audio-button" onclick="document.getElementById('audio_Askaskwe').play()">🔊</button>
+            </div>
+            <div class="definition">Green</div>
+            <audio id="audio_Askaskwe" src="../audio/Askaskwe.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Chahkol
+                <button class="audio-button" onclick="document.getElementById('audio_Chahkol').play()">🔊</button>
+            </div>
+            <div class="definition">Frog</div>
+            <audio id="audio_Chahkol" src="../audio/Chahkol.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Chelihwes
+                <button class="audio-button" onclick="document.getElementById('audio_Chelihwes').play()">🔊</button>
+            </div>
+            <div class="definition">Kingfisher</div>
+            <audio id="audio_Chelihwes" src="../audio/Chelihwes.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Chemames
+                <button class="audio-button" onclick="document.getElementById('audio_Chemames').play()">🔊</button>
+            </div>
+            <div class="definition">Rabbit</div>
+            <audio id="audio_Chemames" src="../audio/Chemames.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Chitaneyo
+                <button class="audio-button" onclick="document.getElementById('audio_Chitaneyo').play()">🔊</button>
+            </div>
+            <div class="definition">It is strong</div>
+            <audio id="audio_Chitaneyo" src="../audio/Chitaneyo.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Chulens
+                <button class="audio-button" onclick="document.getElementById('audio_Chulens').play()">🔊</button>
+            </div>
+            <div class="definition">Bird</div>
+            <audio id="audio_Chulens" src="../audio/Chulens.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Chulensak
+                <button class="audio-button" onclick="document.getElementById('audio_Chulensak').play()">🔊</button>
+            </div>
+            <div class="definition">Birds</div>
+            <audio id="audio_Chulensak" src="../audio/Chulensak.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Kawiya
+                <button class="audio-button" onclick="document.getElementById('audio_Kawiya').play()">🔊</button>
+            </div>
+            <div class="definition">Porcupine</div>
+            <audio id="audio_Kawiya" src="../audio/Kawiya.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Kaxte
+                <button class="audio-button" onclick="document.getElementById('audio_Kaxte').play()">🔊</button>
+            </div>
+            <div class="definition">It is dry</div>
+            <audio id="audio_Kaxte" src="../audio/Kaxte.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Kine
+                <button class="audio-button" onclick="document.getElementById('audio_Kine').play()">🔊</button>
+            </div>
+            <div class="definition">It is sharp</div>
+            <audio id="audio_Kine" src="../audio/Kine.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Kwekonxas
+                <button class="audio-button" onclick="document.getElementById('audio_Kwekonxas').play()">🔊</button>
+            </div>
+            <div class="definition">Donkey</div>
+            <audio id="audio_Kwekonxas" src="../audio/Kwekonxas.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Kwene
+                <button class="audio-button" onclick="document.getElementById('audio_Kwene').play()">🔊</button>
+            </div>
+            <div class="definition">It is long</div>
+            <audio id="audio_Kwene" src="../audio/Kwene.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Kwenemuxkw
+                <button class="audio-button" onclick="document.getElementById('audio_Kwenemuxkw').play()">🔊</button>
+            </div>
+            <div class="definition">Otter</div>
+            <audio id="audio_Kwenemuxkw" src="../audio/Kwenemuxkw.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Kweshkwetet
+                <button class="audio-button" onclick="document.getElementById('audio_Kweshkwetet').play()">🔊</button>
+            </div>
+            <div class="definition">Pig</div>
+            <audio id="audio_Kweshkwetet" src="../audio/Kweshkwetet.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Kwikwinkem
+                <button class="audio-button" onclick="document.getElementById('audio_Kwikwinkem').play()">🔊</button>
+            </div>
+            <div class="definition">Duck</div>
+            <audio id="audio_Kwikwinkem" src="../audio/Kwikwinkem.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Kwsukon
+                <button class="audio-button" onclick="document.getElementById('audio_Kwsukon').play()">🔊</button>
+            </div>
+            <div class="definition">It is heavy</div>
+            <audio id="audio_Kwsukon" src="../audio/Kwsukon.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Maxke
+                <button class="audio-button" onclick="document.getElementById('audio_Maxke').play()">🔊</button>
+            </div>
+            <div class="definition">Red (Singular) (Inanimate)</div>
+            <audio id="audio_Maxke" src="../audio/Maxke.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Maxksit
+                <button class="audio-button" onclick="document.getElementById('audio_Maxksit').play()">🔊</button>
+            </div>
+            <div class="definition">Red (Singular) (Animate)</div>
+            <audio id="audio_Maxksit" src="../audio/Maxksit.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Maxksitchik
+                <button class="audio-button" onclick="document.getElementById('audio_Maxksitchik').play()">🔊</button>
+            </div>
+            <div class="definition">Red (Plural) (Animate</div>
+            <audio id="audio_Maxksitchik" src="../audio/Maxksitchik.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Maxkw
+                <button class="audio-button" onclick="document.getElementById('audio_Maxkw').play()">🔊</button>
+            </div>
+            <div class="definition">Bear</div>
+            <audio id="audio_Maxkw" src="../audio/Maxkw.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Mekitet
+                <button class="audio-button" onclick="document.getElementById('audio_Mekitet').play()">🔊</button>
+            </div>
+            <div class="definition">Lamb</div>
+            <audio id="audio_Mekitet" src="../audio/Mekitet.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Mwekane
+                <button class="audio-button" onclick="document.getElementById('audio_Mwekane').play()">🔊</button>
+            </div>
+            <div class="definition">Dog</div>
+            <audio id="audio_Mwekane" src="../audio/Mwekane.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Nahenem
+                <button class="audio-button" onclick="document.getElementById('audio_Nahenem').play()">🔊</button>
+            </div>
+            <div class="definition">Raccoon</div>
+            <audio id="audio_Nahenem" src="../audio/Nahenem.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Namesak
+                <button class="audio-button" onclick="document.getElementById('audio_Namesak').play()">🔊</button>
+            </div>
+            <div class="definition">Fishes</div>
+            <audio id="audio_Namesak" src="../audio/Namesak.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Naxeche
+                <button class="audio-button" onclick="document.getElementById('audio_Naxeche').play()">🔊</button>
+            </div>
+            <div class="definition">It is triangular</div>
+            <audio id="audio_Naxeche" src="../audio/Naxeche.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Nehenaonkes
+                <button class="audio-button" onclick="document.getElementById('audio_Nehenaonkes').play()">🔊</button>
+            </div>
+            <div class="definition">Horse</div>
+            <audio id="audio_Nehenaonkes" src="../audio/Nehenaonkes.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Newa
+                <button class="audio-button" onclick="document.getElementById('audio_Newa').play()">🔊</button>
+            </div>
+            <div class="definition">Four</div>
+            <audio id="audio_Newa" src="../audio/Newa.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Nisha
+                <button class="audio-button" onclick="document.getElementById('audio_Nisha').play()">🔊</button>
+            </div>
+            <div class="definition">Two</div>
+            <audio id="audio_Nisha" src="../audio/Nisha.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Niske
+                <button class="audio-button" onclick="document.getElementById('audio_Niske').play()">🔊</button>
+            </div>
+            <div class="definition">It is dirty</div>
+            <audio id="audio_Niske" src="../audio/Niske.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Okche
+                <button class="audio-button" onclick="document.getElementById('audio_Okche').play()">🔊</button>
+            </div>
+            <div class="definition">It is crooked</div>
+            <audio id="audio_Okche" src="../audio/Okche.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Okwes
+                <button class="audio-button" onclick="document.getElementById('audio_Okwes').play()">🔊</button>
+            </div>
+            <div class="definition">Fox</div>
+            <audio id="audio_Okwes" src="../audio/Okwes.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Okwsak
+                <button class="audio-button" onclick="document.getElementById('audio_Okwsak').play()">🔊</button>
+            </div>
+            <div class="definition">Foxes</div>
+            <audio id="audio_Okwsak" src="../audio/Okwsak.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Olenchiksit
+                <button class="audio-button" onclick="document.getElementById('audio_Olenchiksit').play()">🔊</button>
+            </div>
+            <div class="definition">Orange (Singular) (Animate)</div>
+            <audio id="audio_Olenchiksit" src="../audio/Olenchiksit.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Olenchiksu
+                <button class="audio-button" onclick="document.getElementById('audio_Olenchiksu').play()">🔊</button>
+            </div>
+            <div class="definition">Orange (Plural) (Animate)</div>
+            <audio id="audio_Olenchiksu" src="../audio/Olenchiksu.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Olenchikte
+                <button class="audio-button" onclick="document.getElementById('audio_Olenchikte').play()">🔊</button>
+            </div>
+            <div class="definition">Orange (Singular) (Inanimate)</div>
+            <audio id="audio_Olenchikte" src="../audio/Olenchikte.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Ope
+                <button class="audio-button" onclick="document.getElementById('audio_Ope').play()">🔊</button>
+            </div>
+            <div class="definition">White</div>
+            <audio id="audio_Ope" src="../audio/Ope.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Pake
+                <button class="audio-button" onclick="document.getElementById('audio_Pake').play()">🔊</button>
+            </div>
+            <div class="definition">It is flat</div>
+            <audio id="audio_Pake" src="../audio/Pake.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Pampil
+                <button class="audio-button" onclick="document.getElementById('audio_Pampil').play()">🔊</button>
+            </div>
+            <div class="definition">Paper</div>
+            <audio id="audio_Pampil" src="../audio/Pampil.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Pilet
+                <button class="audio-button" onclick="document.getElementById('audio_Pilet').play()">🔊</button>
+            </div>
+            <div class="definition">It is clean</div>
+            <audio id="audio_Pilet" src="../audio/Pilet.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Psakon
+                <button class="audio-button" onclick="document.getElementById('audio_Psakon').play()">🔊</button>
+            </div>
+            <div class="definition">Sticky</div>
+            <audio id="audio_Psakon" src="../audio/Psakon.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Pukwes
+                <button class="audio-button" onclick="document.getElementById('audio_Pukwes').play()">🔊</button>
+            </div>
+            <div class="definition">Mouse</div>
+            <audio id="audio_Pukwes" src="../audio/Pukwes.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Pushis
+                <button class="audio-button" onclick="document.getElementById('audio_Pushis').play()">🔊</button>
+            </div>
+            <div class="definition">Cat</div>
+            <audio id="audio_Pushis" src="../audio/Pushis.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Sapele
+                <button class="audio-button" onclick="document.getElementById('audio_Sapele').play()">🔊</button>
+            </div>
+            <div class="definition">It is shiny</div>
+            <audio id="audio_Sapele" src="../audio/Sapele.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Seksit
+                <button class="audio-button" onclick="document.getElementById('audio_Seksit').play()">🔊</button>
+            </div>
+            <div class="definition">Black (Singular) (Animate)</div>
+            <audio id="audio_Seksit" src="../audio/Seksit.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Shaxahkeyo
+                <button class="audio-button" onclick="document.getElementById('audio_Shaxahkeyo').play()">🔊</button>
+            </div>
+            <div class="definition">They are straight</div>
+            <audio id="audio_Shaxahkeyo" src="../audio/Shaxahkeyo.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Shakakok
+                <button class="audio-button" onclick="document.getElementById('audio_Shakakok').play()">🔊</button>
+            </div>
+            <div class="definition">Skunks</div>
+            <audio id="audio_Shakakok" src="../audio/Shakakok.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Shakakw
+                <button class="audio-button" onclick="document.getElementById('audio_Shakakw').play()">🔊</button>
+            </div>
+            <div class="definition">Skunk</div>
+            <audio id="audio_Shakakw" src="../audio/Shakakw.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Sisawin
+                <button class="audio-button" onclick="document.getElementById('audio_Sisawin').play()">🔊</button>
+            </div>
+            <div class="definition">Oyster</div>
+            <audio id="audio_Sisawin" src="../audio/Sisawin.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Siskwinaksit
+                <button class="audio-button" onclick="document.getElementById('audio_Siskwinaksit').play()">🔊</button>
+            </div>
+            <div class="definition">Brown (Singular) (Animate)</div>
+            <audio id="audio_Siskwinaksit" src="../audio/Siskwinaksit.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Siskwinakwsu
+                <button class="audio-button" onclick="document.getElementById('audio_Siskwinakwsu').play()">🔊</button>
+            </div>
+            <div class="definition">Brown (Singular) (Inanimate)</div>
+            <audio id="audio_Siskwinakwsu" src="../audio/Siskwinakwsu.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Somi
+                <button class="audio-button" onclick="document.getElementById('audio_Somi').play()">🔊</button>
+            </div>
+            <div class="definition">Too</div>
+            <audio id="audio_Somi" src="../audio/Somi.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Tahkox
+                <button class="audio-button" onclick="document.getElementById('audio_Tahkox').play()">🔊</button>
+            </div>
+            <div class="definition">Turtle</div>
+            <audio id="audio_Tahkox" src="../audio/Tahkox.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Tahkoxak
+                <button class="audio-button" onclick="document.getElementById('audio_Tahkoxak').play()">🔊</button>
+            </div>
+            <div class="definition">Turtles</div>
+            <audio id="audio_Tahkoxak" src="../audio/Tahkoxak.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Takwe
+                <button class="audio-button" onclick="document.getElementById('audio_Takwe').play()">🔊</button>
+            </div>
+            <div class="definition">It is short</div>
+            <audio id="audio_Takwe" src="../audio/Takwe.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Tanke
+                <button class="audio-button" onclick="document.getElementById('audio_Tanke').play()">🔊</button>
+            </div>
+            <div class="definition">It is small</div>
+            <audio id="audio_Tanke" src="../audio/Tanke.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Tanketik
+                <button class="audio-button" onclick="document.getElementById('audio_Tanketik').play()">🔊</button>
+            </div>
+            <div class="definition">Small</div>
+            <audio id="audio_Tanketik" src="../audio/Tanketik.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Temakwe
+                <button class="audio-button" onclick="document.getElementById('audio_Temakwe').play()">🔊</button>
+            </div>
+            <div class="definition">Beaver</div>
+            <audio id="audio_Temakwe" src="../audio/Temakwe.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Tipas
+                <button class="audio-button" onclick="document.getElementById('audio_Tipas').play()">🔊</button>
+            </div>
+            <div class="definition">Chicken</div>
+            <audio id="audio_Tipas" src="../audio/Tipas.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Tukwe
+                <button class="audio-button" onclick="document.getElementById('audio_Tukwe').play()">🔊</button>
+            </div>
+            <div class="definition">It is round</div>
+            <audio id="audio_Tukwe" src="../audio/Tukwe.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Wehshumwis
+                <button class="audio-button" onclick="document.getElementById('audio_Wehshumwis').play()">🔊</button>
+            </div>
+            <div class="definition">Cow</div>
+            <audio id="audio_Wehshumwis" src="../audio/Wehshumwis.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Wesken
+                <button class="audio-button" onclick="document.getElementById('audio_Wesken').play()">🔊</button>
+            </div>
+            <div class="definition">It is new</div>
+            <audio id="audio_Wesken" src="../audio/Wesken.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Wisae
+                <button class="audio-button" onclick="document.getElementById('audio_Wisae').play()">🔊</button>
+            </div>
+            <div class="definition">Yellow (Singular) (Inanimate)</div>
+            <audio id="audio_Wisae" src="../audio/Wisae.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Wisahkimiksit
+                <button class="audio-button" onclick="document.getElementById('audio_Wisahkimiksit').play()">🔊</button>
+            </div>
+            <div class="definition">Yellow (Plural) (Animate)</div>
+            <audio id="audio_Wisahkimiksit" src="../audio/Wisahkimiksit.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Wisawchulensak
+                <button class="audio-button" onclick="document.getElementById('audio_Wisawchulensak').play()">🔊</button>
+            </div>
+            <div class="definition">Yellow Birds</div>
+            <audio id="audio_Wisawchulensak" src="../audio/Wisawchulensak.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Xanikw
+                <button class="audio-button" onclick="document.getElementById('audio_Xanikw').play()">🔊</button>
+            </div>
+            <div class="definition">Squirrel</div>
+            <audio id="audio_Xanikw" src="../audio/Xanikw.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Xinkohsen
+                <button class="audio-button" onclick="document.getElementById('audio_Xinkohsen').play()">🔊</button>
+            </div>
+            <div class="definition">Big Rock</div>
+            <audio id="audio_Xinkohsen" src="../audio/Xinkohsen.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Xinkwe
+                <button class="audio-button" onclick="document.getElementById('audio_Xinkwe').play()">🔊</button>
+            </div>
+            <div class="definition">It is big</div>
+            <audio id="audio_Xinkwe" src="../audio/Xinkwe.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Xkuk
+                <button class="audio-button" onclick="document.getElementById('audio_Xkuk').play()">🔊</button>
+            </div>
+            <div class="definition">Snake</div>
+            <audio id="audio_Xkuk" src="../audio/Xkuk.mp3"></audio>
+        </div>
+    
+        <div class="entry">
+            <div class="term">
+                Xuwe
+                <button class="audio-button" onclick="document.getElementById('audio_Xuwe').play()">🔊</button>
+            </div>
+            <div class="definition">It is old</div>
+            <audio id="audio_Xuwe" src="../audio/Xuwe.mp3"></audio>
+        </div>
+    
+    </div>
+</body>
+</html>
